@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NLW Unite</title>
+
+  <link rel="stylesheet" href="./src/output.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/relativeTime.js"></script>
+  <script>dayjs.extend(window.dayjs_plugin_relativeTime)</script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
+  <script>dayjs.locale('pt-br')</script>
+</head>
+<body class="flex justify-center bg-nlw-bg text-nlw-white font-roboto">
+
+  <div class="w-full max-w-[43rem] px-8 py-5 grid gap-5">
+    <div class="py-2">
+      <img src="./assets/logo.svg">
+    </div>
+
+    <div class="w-full h-px bg-white/10"></div>
+
+    <form onsubmit="adicionarParticipante(event)">
+      <fieldset class="grid gap-4">
+        <h2 class="font-bold text-base">Inscrição</h2>
+        <div class="flex gap-1 justify-between">
+          <div class="flex items-center justify-center gap-3 px-3 py-2 border border-white/10 rounded-[0.625rem] focus-within:border-white">
+            <label class="w-4 h-4 shrink-0" for="nome"><img src="./assets/circle-user-round.svg"></label>
+            <input class="w-full text-nlw-white font-normal text-sm placeholder:text-nlw-grey bg-transparent focus:outline-none" type="text" placeholder="Nome completo" name="nome" required>
+          </div>
+          <div class="flex items-center justify-center gap-3 px-3 py-2 border border-white/10 rounded-[0.625rem] focus-within:border-white">
+            <label class="w-4 h-4 shrink-0" for="email"><img src="./assets/at-sign.svg"></label>
+            <input class="w-full text-nlw-white font-normal text-sm placeholder:text-nlw-grey bg-transparent focus:outline-none" type="email" placeholder="E-mail" name="email" required>
+          </div>
+          <button class="py-1.5 px-5 bg-nlw-orange hover:bg-orange-400 text-nlw-dark-green font-bold text-xs rounded-[0.625rem] uppercase transition-colors">
+            REALIZAR INSCRIÇÃO
+          </button>
+        </div>
+      </fieldset>
+    </form>
+    
+    <div class="w-full h-px bg-white/10"></div>
+
+    <div class="grid gap-4">
+      <h2 class="font-bold text-base">Participantes</h2>
+      <div class="border border-white/10 rounded-lg">
+        <table class="w-full border-collapse">
+          <thead class="text-left font-semibold text-sm">
+            <tr>
+              <th class="px-4 py-3">Participante</th>
+              <th class="px-4 py-3">Data da inscrição</th>
+              <th class="px-4 py-3">Data do check-in</th>
+            </tr>
+          </thead>
+          <tbody class="">
+      
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  <script src="./src/script.js"></script>
+</body>
+</html>
